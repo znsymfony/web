@@ -1,0 +1,23 @@
+{
+  "name": "znsymfony/web",
+  "type": "extension",
+  "license": "MIT",
+  "authors": [
+    {
+      "name": "Yamshikov Vitaliy",
+      "email": "theyamshikov@yandex.ru"
+    }
+  ],
+  "minimum-stability": "dev",
+  "require": {
+    "symfony/form": "^4.4|^5.3|^6.0",
+    "symfony/security-csrf": "^4.4|^5.0",
+    "symfony/framework-bundle": "^4.4|^5.0|^6.0",
+  },
+  "autoload": {
+    "psr-4": {
+      "ZnSymfony\\Web\\": "src",
+      "ZnSymfony\\Web\\Tests\\": "tests"
+    }
+  }
+}

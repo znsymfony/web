@@ -20,22 +20,16 @@ use Symfony\Component\Security\Csrf\TokenStorage\SessionTokenStorage;
 use Symfony\Component\Security\Csrf\TokenStorage\TokenStorageInterface;
 
 return [
-    'definitions' => [
-
-    ],
     'singletons' => [
         ArgumentResolverInterface::class => ArgumentResolver::class,
         UrlGeneratorInterface::class => UrlGenerator::class,
-
         TokenStorageInterface::class => function (ContainerInterface $container) {
             $session = $container->get(SessionInterface::class);
             return new SessionTokenStorage($session);
         },
-
         SessionInterface::class => Session::class,
         CsrfTokenManagerInterface::class => CsrfTokenManager::class,
         ResolvedFormTypeFactoryInterface::class => ResolvedFormTypeFactory::class,
-//        RuntimeLoaderInterface::class => FactoryRuntimeLoader::class,
         FormFactoryInterface::class => FormFactory::class,
         FormRegistryInterface::class => function (ContainerInterface $container) {
             $extensions = [
@@ -45,8 +39,5 @@ return [
             $registry = new FormRegistry($extensions, $resolvedFormTypeFactory);
             return $registry;
         },
-    ],
-    'entities' => [
-
     ],
 ];

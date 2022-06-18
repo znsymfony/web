@@ -4,7 +4,7 @@ namespace ZnSymfony\Web\Domain\Subscribers;
 
 use Symfony\Component\EventDispatcher\EventSubscriberInterface;
 use Symfony\Contracts\EventDispatcher\Event;
-use ZnSandbox\Sandbox\App\Enums\AppEventEnum;
+use ZnCore\Base\Libs\App\Enums\AppEventEnum;
 
 class WebDetectTestEnvSubscriber implements EventSubscriberInterface
 {

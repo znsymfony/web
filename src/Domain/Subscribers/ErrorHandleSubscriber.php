@@ -7,8 +7,8 @@ use Symfony\Component\HttpFoundation\Response;
 use Symfony\Component\HttpKernel\Event\ExceptionEvent;
 use Symfony\Component\HttpKernel\KernelEvents;
 use ZnLib\Web\View\View;
-use ZnSandbox\Sandbox\App\Libs\CallAction;
-use ZnSandbox\Sandbox\Error\Symfony4\Web\Controllers\ErrorController2;
+use ZnSymfony\Web\Domain\Libs\CallAction;
+use ZnSymfony\Web\Symfony4\Controllers\ErrorController2;
 
 class ErrorHandleSubscriber implements EventSubscriberInterface
 {

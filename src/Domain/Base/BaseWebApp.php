@@ -9,7 +9,7 @@ use Symfony\Component\HttpKernel\HttpKernelInterface;
 use Symfony\Component\Routing\RouteCollection;
 use ZnCore\Base\Libs\App\Base\BaseApp;
 use ZnCore\Base\Libs\Container\Interfaces\ContainerConfiguratorInterface;
-use ZnCore\Base\Libs\Event\Interfaces\EventDispatcherConfiguratorInterface;
+use ZnCore\Base\Libs\EventDispatcher\Interfaces\EventDispatcherConfiguratorInterface;
 use ZnLib\Web\View\View;
 use ZnSymfony\Web\Domain\Subscribers\FindRouteSubscriber;
 use ZnSymfony\Web\Domain\Subscribers\WebDetectTestEnvSubscriber;

@@ -4,7 +4,7 @@ namespace ZnSymfony\Web\Domain\Subscribers;
 
 use Symfony\Component\EventDispatcher\EventSubscriberInterface;
 use Symfony\Contracts\EventDispatcher\Event;
-use ZnCore\Base\Libs\App\Enums\AppEventEnum;
+use ZnCore\Base\App\Enums\AppEventEnum;
 
 class WebDetectTestEnvSubscriber implements EventSubscriberInterface
 {
@@ -19,8 +19,8 @@ class WebDetectTestEnvSubscriber implements EventSubscriberInterface
     public function onBeforeInitEnv(Event $event)
     {
 $envDetector = new \ZnLib\Web\Libs\EnvDetector\WebEnvDetector();
-//$envDetector = new \ZnCore\Base\Libs\App\Libs\EnvDetector\ConsoleEnvDetector();
-//        $envDetector = new \ZnCore\Base\Libs\App\Libs\EnvDetector\EnvDetector();
+//$envDetector = new \ZnCore\Base\App\Libs\EnvDetector\ConsoleEnvDetector();
+//        $envDetector = new \ZnCore\Base\App\Libs\EnvDetector\EnvDetector();
         $isTest = $envDetector->isTest();
 //        global $_GET, $_SERVER;
 //        $isTest = (isset($_SERVER['HTTP_ENV_NAME']) && $_SERVER['HTTP_ENV_NAME'] == 'test') || (isset($_GET['env']) && $_GET['env'] == 'test');
